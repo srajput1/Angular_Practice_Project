@@ -1,7 +1,9 @@
 <div class="row">
-    <div class="col-xs-12">
-        <a *ngFor="let CD of cakeImage">
-            <img src="{{CD.ImgPath}}" alt="" class="img-responsive" style="max-height: 400px;">
-        </a>
-    </div>
+  <div class="col-xs-12">         
+    <marquee behavior="alternate" direction="">
+      <a *ngFor="let CD of cakeImage"> <img src="{{CD.ImgPath}}" alt="" class="img-responsive"> </a> </marquee>
+   </div>
 </div>
+      
+
+
