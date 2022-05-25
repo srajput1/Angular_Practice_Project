@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CakeServiceService } from 'src/services/cake-service.service';
 import { cakeDetails } from 'src/app/cakeDetails.model';
 
 @Component({
@@ -7,17 +8,11 @@ import { cakeDetails } from 'src/app/cakeDetails.model';
   styleUrls: ['./cake-images.component.css']
 })
 export class CakeImagesComponent implements OnInit {
-  cakeImage: cakeDetails[] =[
-    new cakeDetails('../../assets/030.jpg'),
-    new cakeDetails('../../assets/71x0no3astc21.webp'),
-    new cakeDetails('../../assets/900_755567gfsP_christmas-wedding-cake.jpg'),
-    new cakeDetails('../../assets/1200px-Wedding_cake_with_pillar_supports,_2009.jpg'),
-    new cakeDetails('../../assets/Glamorous-Wedding-Cake.jpg'),
-    new cakeDetails('../../assets/Heartsweet.webp')
-  ];
-  constructor() { }
+  cakeImage: cakeDetails[] =[];
+  constructor(private cakeservice:CakeServiceService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.cakeImage = this.cakeservice.getCakeDetails();
   }
 
 }
