@@ -1,1 +1,15 @@
-<p>menu works!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <a *ngFor ="let CI of cakeItems"
+         class="list-group-item clearfix">
+         <div class="pull-left">
+             <h4 class="list-group-item-heading">{{CI.name}}</h4>
+             <p class="list-group-item-text">{{ CI.desc }}</p>
+         </div>
+         <span class="pull-right" *ngFor= "let CI of cakeImage ">
+             <img [src]="CI.ImgPath" alt="" class="img-responsive"
+             style="max-height: 50px;">
+         </span>
+        </a>
+    </div>
+</div>

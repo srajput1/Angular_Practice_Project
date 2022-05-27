@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CakeServiceService } from 'src/services/cake-service.service';
+import { CakeServiceService } from 'src/app/services/cake-service.service';
 import { cakeDetails } from 'src/app/cakeDetails.model';
 
 @Component({

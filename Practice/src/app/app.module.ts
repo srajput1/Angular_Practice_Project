@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CakeImagesComponent } from './header/cake-images/cake-images.component';
-import { CakeServiceService } from '../services/cake-service.service';
+import { CakeServiceService } from './services/cake-service.service';
 import { MenuComponent } from './menu/menu.component';
 import { CartComponent } from './cart/cart.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+//import { MenuItemComponent } from './menu/menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
    CakeImagesComponent,
    MenuComponent,
    CartComponent,
-   ContactUsComponent
+   ContactUsComponent,
+  // MenuItemComponent
   ],
   imports: [
     BrowserModule,
